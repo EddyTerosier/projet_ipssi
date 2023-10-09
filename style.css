@@ -1,51 +1,64 @@
 /* reset */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-    font-family: var(--font-family);
-    background-color: var(--background-light);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: var(--font-family);
+  background-color: var(--background-light);
+}
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-h1, p {
-    margin: 0;
+main {
+  flex-grow: 1; /* Le contenu principal prendra autant d'espace que possible */
+}
+
+h1,
+p {
+  margin: 0;
+  color: var(--text-color);
 }
 
 h1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 ul {
-    padding: 0;
-    list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
 
 /* thème */
 :root {
-    --font-family: 'Roboto', sans-serif;
-    --primary: #49280D!important;
-    --secondary: #ECEADA !important;
+  --font-family: "Roboto", sans-serif;
+  --primary: #49280d !important;
+  --secondary: #eceada !important;
 
-
-    --dark: #2c3e50;
-    --danger: #e74c3c;
-    --background-light: #ecf0f1;
-    --text-color: #444;
-    --text-color-light: #fff;
-    --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60,64,67,0.15) 0px 2px 6px 2px;
-    --border: 1px solid #eee;
+  --dark: #2c3e50;
+  --danger: #e74c3c;
+  --background-light: #ecf0f1;
+  --text-color: #444 !important;
+  --text-color-light: #fff;
+  --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --border: 1px solid #eee;
 }
 
 /* BODY */
-header,footer {
-    background-color: var(--secondary);
+header,
+footer {
+    padding:0;
+  background-color: var(--secondary);
 }
+
 .logoFooter {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
