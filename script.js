@@ -5,7 +5,7 @@ if (document.cookie.indexOf("politique=true") === -1) {
   modal.show();
 }
 
-if (document === "index.html"){
+if (document.location.pathname.endsWith("/")){
     confirmButton.addEventListener('click', () => {
         document.cookie = "politique=true";
         modal.close();
@@ -13,6 +13,7 @@ if (document === "index.html"){
 }
 
 
+if (document.location.pathname.endsWith("contact.html")){
 let map = L.map('map').setView([48.87, 2.30], 14);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -20,5 +21,4 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 marker = new L.marker([48.870502, 2.304897], {}).bindPopup("Boutique Addidous des Champs Elysées, 59 Avenue des Champs Elysées, 75008 Paris").addTo(map);
-
-map.on();
+}
