@@ -20,16 +20,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <script
+      defer
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"></script>
     <script
+      defer
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
     <script defer src="script.js"></script>
     <title>Projet - Chaussures</title>
@@ -38,29 +41,32 @@
     <!-- Header -->
     <header>
       <nav class="navbar navbar-expand-lg d-flex justify-content-around">
-        <a href="/"><img src="/assets/Addidous.png" alt="logo" width="150px"></a>
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="produits.html">Produits</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="connexion.html">Connexion / Inscription</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Langues</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin.html">Admin</a>
-            </li>
-          </ul>
+        <a href="/"><img src="/assets/Addidous.png" alt="logo" width="150px" /></a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="produits.html">Produits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="connexion.html">Connexion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Langues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.html">Admin</a>
+          </li>
+        </ul>
       </nav>
     </header>
+    <!-- FIN HEADER -->
+
+    <!-- MAIN -->
     <main>
       <div class="container col-md-12">
         <dialog>
@@ -72,99 +78,115 @@
             </footer>
           </article>
         </dialog>
-        <!-- <div class="banner">
-            <img src="assets/banniere-chaussures.jpg" alt="banner">
-          </div> -->
+
         <!-- EN-TETE -->
         <div class="d-flex justify-content-around mb-5">
-          <section width="70%">
-            <h2>A propos de nous ?</h2>
+          <section>
+            <h2 class="text-center fs-1">A propos de nous ?</h2>
             <br />
             <p>
               Bienvenue chez Addidous, votre destination ultime pour trouver les chaussures parfaites qui allient style, confort et qualité. Depuis 2023, nous nous engageons à
-              offrir à nos clients une expérience exceptionnelle de shopping pour chaussures.
+              offrir à nos clients une expérience exceptionnelle de shopping pour chaussures. Rejoignez-nous dans cette aventure de la mode et de la découverte. Découvrez notre
+              collection exceptionnelle de chaussures et trouvez la paire parfaite qui vous accompagnera dans tous vos pas. Merci de choisir Addidous pour votre
+              shopping de chaussures. Nous sommes impatients de vous servir et de vous faire vivre une expérience de shopping inoubliable.
             </p>
           </section>
-          <img src="/assets/banniere-chaussures.jpg" alt="chaussures d'accueil" width="30%" />
         </div>
         <hr />
+        <!-- FIN EN-TETE -->
+
         <!-- CARD -->
-        <div class="card-group col-md-12 mt-5">
-          <div class="card">
-            <i class="fa-regular fa-eye text-center fs-1 mt-4"></i>
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">Notre histoire</h5>
-              <p class="card-text">
-                Fondée par des passionnés de la mode et de la chaussure, Addidous Shoes est née de l'idée que chaque paire de chaussures raconte une histoire unique
-              </p>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <i class="fa-regular fa-eye text-center fs-1 mt-4"></i>
+                <div class="card-body">
+                  <h5 class="card-title text-center mb-4">Notre histoire</h5>
+                  <p class="card-text">
+                    Fondée par des passionnés de la mode et de la chaussure, Addidous Shoes est née de l'idée que chaque paire de chaussures raconte une histoire unique.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <i class="fa-regular fa-handshake text-center fs-1 mt-4"></i>
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">Notre mission</h5>
-              <p class="card-text">
-                Chez Addidous Shoes, notre mission est simple : vous aider à trouver la paire de chaussures parfaite qui correspond à votre style, votre personnalité et votre
-                confort.
-              </p>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <i class="fa-regular fa-building text-center fs-1 mt-4"></i>
+                <div class="card-body">
+                  <h5 class="card-title text-center mb-4">Expertise</h5>
+                  <ul>
+                    <li>Large sélection</li>
+                    <li>Qualité exceptionnelle</li>
+                    <li>Livraison rapide</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <i class="fa-regular fa-building text-center fs-1 mt-4"></i>
-            <div class="card-body">
-              <h5 class="card-title text-center mb-4">Expertise</h5>
-              <ul>
-                <li>Large Selection</li>
-                <li>Qualité exceptionnelle</li>
-                <li>Livraison rapide</li>
-              </ul>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <i class="fa-regular fa-handshake text-center fs-1 mt-4"></i>
+                <div class="card-body">
+                  <h5 class="card-title text-center mb-4">Notre mission</h5>
+                  <p class="card-text">
+                    Chez Addidous Shoes, notre mission est simple : vous aider à trouver la paire de chaussures parfaite qui correspond à votre style, votre personnalité et votre
+                    confort.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <!-- FIN CARDS -->
+
         <!-- CAROUSEL -->
-        <div id="carouselExampleControls" class="carousel slide mt-5" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="assets/banniere-chaussures.jpg" alt="First slide" />
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="assets/banniere-chaussures.jpg" alt="Second slide" />
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="assets/banniere-chaussures.jpg" alt="Third slide" />
+        <section class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/banniere-chaussures.jpg" class="d-block w-100" alt="Chaussure 1" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/banniere-chaussures.jpg" class="d-block w-100" alt="Chaussure 2" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/banniere-chaussures.jpg" class="d-block w-100" alt="Chaussure 3" />
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </a>
+              </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+        </section>
+        <!-- FIN CAROUSEL -->
       </div>
     </main>
+    <!-- FIN MAIN -->
+
+    <!-- FOOTER -->
     <footer>
-      <aside class="d-flex justify-content-around">
-        <img src="./assets/Addidous.png" alt="Logo" class="logoFooter" />
-        <nav>
-          <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="produits.html">Produits</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="connexion.html">Connexion / Inscription</a></li>
-            <li><a href="">Langues</a></li>
-            <li><a href="admin.html">Admin</a></li>
-          </ul>
-        </nav>
-        <nav>
-          <ul>
-            <li><a href="politique.html">Politiques de confidentialités</a></li>
-            <li><a href="#">Cookies</a></li>
-          </ul>
-        </nav>
-      </aside>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Accueil</a></li>
+        <li class="nav-item"><a href="produits.html" class="nav-link px-2 text-muted">Produits</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+        <li class="nav-item"><a href="connexion.html" class="nav-link px-2 text-muted">Connexion</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Langues</a></li>
+        <li class="nav-item"><a href="admin.html" class="nav-link px-2 text-muted">Admin</a></li>
+      </ul>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="politique.html" class="nav-link px-2 text-muted">Politiques de confidentialités</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cookies</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2023 Addidous Shoes, Inc</p>
     </footer>
+    <!-- FIN FOOTER -->
   </body>
 </html>
