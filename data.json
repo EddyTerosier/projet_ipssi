@@ -1,0 +1,23 @@
+{
+    "chaussures": [
+      {
+        "nom": "Chaussures de course",
+        "description": "Des chaussures de sport confortables pour la course à pied.",
+        "prix": 79.99,
+        "image": ""
+      },
+      {
+        "nom": "Chaussures de randonnée",
+        "description": "Des chaussures robustes conçues pour la randonnée en plein air.",
+        "prix": 99.99,
+        "image": ""
+      },
+      {
+        "nom": "Chaussures de soirée",
+        "description": "Des chaussures élégantes pour des occasions spéciales.",
+        "prix": 49.99,
+        "image": ""
+      }
+    ]
+  }
+  
