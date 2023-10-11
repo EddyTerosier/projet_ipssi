@@ -58,9 +58,17 @@ footer {
 }
 header {
   padding: 0 !important;
+  filter: invert(0);
 }
+
 
 .logoFooter {
   width: 100px;
   height: 100px;
+}
+
+
+/* TEST pour le darkmode */
+.dark{  
+  filter: invert(100);
 }

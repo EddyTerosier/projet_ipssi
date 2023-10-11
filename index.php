@@ -61,7 +61,10 @@
           <li class="nav-item">
             <a class="nav-link" href="admin.html">Admin</a>
           </li>
-        </ul>
+          <li class="nav-item">
+            <a class="darkMode nav-link"> 🌙 / 🌞 </a>
+          </li>
+        </ul>    
       </nav>
     </header>
     <!-- FIN HEADER -->
