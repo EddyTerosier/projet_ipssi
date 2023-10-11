@@ -10,6 +10,25 @@ if (document.location.pathname.endsWith("/")) {
     document.cookie = "politique=true";
     modal.close();
   });
+
+
+
+  if (localStorage.getItem('dark') == 'true'){
+    document.querySelector('body').classList.toggle("dark")
+}
+
+var buttonDark = document.querySelector(".darkMode");
+
+buttonDark.addEventListener('click', () => {
+  if (localStorage.getItem('dark') === 'true'){
+      document.querySelector('body').classList.remove("dark");
+      localStorage.setItem('dark', false);
+  } else {
+      document.querySelector('body').classList.add("dark");
+      localStorage.setItem('dark', true); 
+  }
+});
+
 }
 
 if (document.location.pathname.endsWith("contact.html")) {
@@ -75,9 +94,8 @@ function rechercherParNom() {
   // Filtrer les chaussures en fonction du terme de recherche
   const chaussuresFiltrees = chaussures.filter((chaussure) => {
     const nomChaussure = chaussure.querySelector(".card-title").innerText.toLowerCase();
-    return nomChaussure.includes(termeRecherche);
+    return nomChaussure.toLowerCase().includes(termeRecherche);
   });
-
   // Afficher toutes les chaussures si le champ de recherche est vide
   if (termeRecherche === "") {
     cartesChaussures.innerHTML = "";
