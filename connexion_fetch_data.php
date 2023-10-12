@@ -36,21 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       if (password_verify($password, $user['password'])) {
         // echo "Login Ok !";
         /* CREATION D'UNE SESSION */
-        $sessionId = bin2hex(random_bytes(32));
-        /* PREPARATION DE LA REQUETE */
-        $statementSession = $pdo->prepare("INSERT INTO session (sessionid,userid) VALUES (
-              :sessionid,
-              :userid)");
-        /* ASSOCIATION DES VALEURS AVEC LES DONNES UTILISATEURS */
-        $statementSession->bindValue(":userid", $user["id"]);
-        $statementSession->bindValue(":sessionid", $sessionId);
-        $statementSession->execute();
-        /* CREATION D'UNE SIGNATURE AVEC CLE PERSO */
-        $signature = hash_hmac("sha256", $sessionId, "ici c'est paris");
-        /* ON PLACE L'ID DANS LES COOKIES UTILISATEUR */
-        /* AVEC UNE DUREE APRES LAQUELLE IL SERA SUPPRIME AUTO */
-        setcookie("session", $sessionId, time() + 60 * 60 * 24 * 14, "", "", false, true);
-        setcookie("signature", $signature, time() + 60 * 60 * 24 * 14, "", "", false, true);
         $_SESSION["user"] = $user;
         // var_dump($_SESSION["user"]);
         // die();

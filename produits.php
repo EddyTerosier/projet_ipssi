@@ -1,8 +1,13 @@
+<?php
+session_start();
+$user = $_SESSION["user"] ?? "";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-  <?php include_once("./inc/head.php"); ?>
+  <?php include_once("./inc/head.php");?>
+  
   <title>Projet - Chaussures</title>
 </head>
 

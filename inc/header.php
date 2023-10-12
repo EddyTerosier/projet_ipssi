@@ -22,12 +22,12 @@ $user = $_SESSION["user"] ?? "";
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php">Déconnexion</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.php">Admin</a>
+                </li>
             <?php else: ?>
                 <li class="nav-item">
                     <a class="nav-link" href="connexion.php">Connexion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin.php">Admin</a>
                 </li>
             <?php endif; ?>
         </ul>

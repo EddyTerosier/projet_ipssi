@@ -1,31 +1,12 @@
 <?php
 require_once './inc/database.php';
+session_start();
+$user = $_SESSION["user"] ?? "";
+
+if ($user) {
+  header("location: /profil.php");
+}
 $error = "";
-
-// $email = $_POST['email'] ?? "";
-// $password = $_POST['password'] ?? "";
-
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//   $statementUser = $pdo->prepare("SELECT * FROM users WHERE email=:email");
-//   $statementUser->bindValue(":email", $email);
-//   $statementUser->execute();
-//   $user = $statementUser->fetch();
-
-//   if ($user) {
-//     if ($password === $user["password"]) {
-//       echo "Login Ok !";
-//       header("location: /index.php");
-//       exit; // Terminer le script après la redirection
-//     } else {
-//       $error = "Mot de passe incorrect";
-//     }
-//   } else {
-//     $error = "Adresse e-mail non trouvée";
-//   }
-// } else {
-//   $error = "Veuillez saisir une adresse e-mail valide";
-// }
-
 ?>
 
 <!DOCTYPE html>

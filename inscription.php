@@ -1,5 +1,12 @@
 <?php
 require_once './inc/database.php';
+session_start();
+$user = $_SESSION["user"] ?? "";
+// var_dump($user);
+// die();
+if ($user) {
+    header("location: /profil.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +99,7 @@ require_once './inc/database.php';
 
           <div class="mt-4 text-center">
             <p class="mb-0">Vous avez déjà un compte ? <a href="connexion.php"
-                class="fw-semibold text-primary text-decoration-underline"> S'inscrire </a></p>
+                class="fw-semibold text-primary text-decoration-underline"> Se connecter </a></p>
           </div>
         </div>
       </div>
