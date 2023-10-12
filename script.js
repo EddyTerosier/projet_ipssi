@@ -31,7 +31,7 @@ buttonDark.addEventListener('click', () => {
 
 }
 
-if (document.location.pathname.endsWith("contact.html")) {
+if (document.location.pathname.endsWith("contact.php")) {
   let map = L.map("map").setView([48.87, 2.3], 14);
 
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
