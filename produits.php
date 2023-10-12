@@ -16,10 +16,42 @@
     <h1 class="text-center fs-1">Nos Chaussures</h1>
     <div class="col-md-6 mx-auto">
       <input type="text" id="recherche" class="form-control" placeholder="Rechercher par nom" />
+
+      <!-- FORM CREATION PRODUIT -->
+      <form action="./produits_fetch_data.php" methode="post">
+        <button>Créer un produit</button>
+      </form>
+      <!-- FIN FORM CREATION PRODUIT -->
+
     </div>
-    <div class="row my-5" id="cartes-chaussures">
-      <!-- Les cartes seront générées dynamiquement ici -->
-    </div>
+      <div class="row my-5" id="cartes-chaussures">
+        <?php
+        require_once './inc/database.php';
+        $result = $pdo->prepare("SELECT * FROM chaussures");
+        $result->execute();
+
+        while ($chaussure = $result->fetch(PDO::FETCH_ASSOC)) {
+        ?>
+        <div class="col-md-4 mb-4">
+          <form action="./details_produit.php" method="POST">
+            <button class="btnDetails btn btn-link" name="id" value="<?php echo $chaussure['ID'] ?>">
+              <div class="card">
+                <img src="<?php echo $chaussure['image']; ?>" class="card-img-top" alt="<?php echo $chaussure['name']; ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $chaussure['name']; ?></h5>
+                  <p class="card-text"><?php echo $chaussure['description']; ?></p>
+                  <p class="card-text">Prix : $<?php echo number_format($chaussure['prix'], 2); ?></p>
+                </div>
+              </div>
+            </button>
+          </form>
+          </div>
+        <?php
+        }
+        ?>
+      </div>
+
+    <!-- </a> -->
   </div>
   <!-- FIN MAIN -->
 

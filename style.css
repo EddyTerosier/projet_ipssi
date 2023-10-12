@@ -72,3 +72,12 @@ header {
 .dark{  
   filter: invert(100);
 }
+
+
+
+/* CARD TEXT */
+
+.btnDetails{
+  text-decoration: none !important;
+  --color: black !important;
+}

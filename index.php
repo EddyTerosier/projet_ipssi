@@ -61,6 +61,9 @@
           <li class="nav-item">
             <a class="nav-link" href="admin.html">Admin</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link darkMode" href="">Dark/Light</a>
+          </li>
         </ul>
       </nav>
     </header>

@@ -52,3 +52,34 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `chaussures`
+--
+
+DROP TABLE IF EXISTS `chaussures`;
+CREATE TABLE IF NOT EXISTS `chaussures` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `prix` decimal(6,2) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `chaussures`
+--
+
+INSERT INTO `chaussures` (`ID`, `name`, `description`, `prix`, `image`) VALUES
+(1, 'Chaussures de course', 'Des chaussures de sport confortables pour la course à pied.', '79.99', 'assets/banniere-chaussures.jpg'),
+(2, 'Chaussures de randonnée', 'Des chaussures robustes conçues pour la randonnée en plein air.', '99.99', 'assets/banniere-chaussures.jpg'),
+(3, 'Chaussures de soirée', 'Des chaussures élégantes pour des occasions spéciales.', '49.99', 'assets/banniere-chaussures.jpg');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

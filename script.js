@@ -44,16 +44,16 @@ if (document.location.pathname.endsWith("contact.html")) {
 // PAGE PRODUIT
 
 // Fonction pour charger les données JSON depuis le fichier
-function chargerDonnees() {
-  fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      afficherCartes(data.chaussures); // Appelez la fonction pour afficher les cartes avec les données chargées
-    })
-    .catch((error) => {
-      console.error("Erreur de chargement des données JSON :", error);
-    });
-}
+// function chargerDonnees() {
+//   fetch("data.json")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       afficherCartes(data.chaussures); // Appelez la fonction pour afficher les cartes avec les données chargées
+//     })
+//     .catch((error) => {
+//       console.error("Erreur de chargement des données JSON :", error);
+//     });
+// }
 
 // Fonction pour afficher les cartes de chaussures
 function afficherCartes(chaussures) {
