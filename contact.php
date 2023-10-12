@@ -42,10 +42,10 @@
         <article>
           <h1 class="text-center mb-5">Contactez-nous</h1>
           <form action="submit" method="post" class="d-flex justify-content-around flex-wrap">
-            <input type="email" name="email" placeholder="E-mail" />
-            <input type="text" name="nom" placeholder="Nom" />
-            <input type="tel" name="tel" placeholder="Téléphone" />
-            <textarea cols="30" rows="6" name="message" placeholder="Message"></textarea>
+            <input type="email" name="email" placeholder="E-mail" required/>
+            <input type="text" name="nom" placeholder="Nom" required/>
+            <input type="tel" name="tel" placeholder="Téléphone" required/>
+            <textarea cols="30" rows="6" name="message" placeholder="Message" required></textarea>
             <button type="submit" class="w-50 mt-3">Valider</button>
           </form>
         </article>
