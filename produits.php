@@ -14,13 +14,11 @@
   <!-- MAIN -->
   <div class="container mt-5">
     <h1 class="text-center fs-1">Nos Chaussures</h1>
-    <div class="col-md-6 mx-auto">
+    <div class="col-md-6 mx-auto d-grid">
       <input type="text" id="recherche" class="form-control" placeholder="Rechercher par nom" />
 
       <!-- FORM CREATION PRODUIT -->
-      <form action="./produits_fetch_data.php" methode="post">
-        <button>Créer un produit</button>
-      </form>
+      <a href="./create_product.php" role="button">Créer un produit</a>
       <!-- FIN FORM CREATION PRODUIT -->
 
     </div>
