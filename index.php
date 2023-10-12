@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <?php include_once("./inc/head.php") ?>;
+  <?php include_once("./inc/head.php"); ?>
   <title>Addidous - Accueil</title>
 </head>
 

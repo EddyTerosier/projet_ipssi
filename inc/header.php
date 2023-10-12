@@ -1,3 +1,6 @@
+<?php
+$user = $_SESSION["user"] ?? "";
+?>
 <!-- Header -->
 <header>
     <nav class="navbar navbar-expand-lg d-flex justify-content-around">
@@ -12,15 +15,21 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="connexion.php">Connexion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Langues</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="admin.php">Admin</a>
-            </li>
+            <?php if ($user): ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="profil.php">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Déconnexion</a>
+                </li>
+            <?php else: ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="connexion.php">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.php">Admin</a>
+                </li>
+            <?php endif; ?>
         </ul>
     </nav>
 </header>
