@@ -2,15 +2,23 @@
 require_once './inc/database.php';
 
 
-if (!empty($_POST["firstname"] && $_POST["lastname"] && $_POST["email"] && $_POST["password"])) {
-  $firstname = $_POST['firstname'];
-  $lastname = $_POST['lastname'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+if (!empty($_POST["firstname"]) && !empty($_POST["lastname"]) && !empty($_POST["email"]) && !empty($_POST["password"])) {
+    $firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $lastname = filter_var($_POST['lastname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $password = filter_var($_POST['password'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-  $result = $pdo->prepare("INSERT INTO users(firstname,lastname,email,password) VALUES('$firstname','$lastname','$email','$password')");
-  $result->execute();
+    
+    $hashedPassword = password_hash($password, PASSWORD_ARGON2ID);
+
+    $result = $pdo->prepare("INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)");
+    $result->bindValue(":firstname", $firstname);
+    $result->bindValue(":lastname", $lastname);
+    $result->bindValue(":email", $email);
+    $result->bindValue(":password", $hashedPassword);
+
+    $result->execute();
+    header("Location: /connexion.php");
+    exit;
 }
-
-header("Location: connexion.php");
 ?>

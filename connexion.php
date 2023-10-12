@@ -1,7 +1,31 @@
 <?php
 require_once './inc/database.php';
-$result = $pdo->prepare("SELECT * FROM users WHERE id = $id");
-$result->execute();
+$error = "";
+
+// $email = $_POST['email'] ?? "";
+// $password = $_POST['password'] ?? "";
+
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//   $statementUser = $pdo->prepare("SELECT * FROM users WHERE email=:email");
+//   $statementUser->bindValue(":email", $email);
+//   $statementUser->execute();
+//   $user = $statementUser->fetch();
+
+//   if ($user) {
+//     if ($password === $user["password"]) {
+//       echo "Login Ok !";
+//       header("location: /index.php");
+//       exit; // Terminer le script après la redirection
+//     } else {
+//       $error = "Mot de passe incorrect";
+//     }
+//   } else {
+//     $error = "Adresse e-mail non trouvée";
+//   }
+// } else {
+//   $error = "Veuillez saisir une adresse e-mail valide";
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -39,23 +63,27 @@ $result->execute();
             <div class="card-body p-4">
               <div class="text-center mt-2">
                 <h5 class="text-primary">Connexion</h5>
+                <?php if ($error): ?>
+                  <h1 style="color:red">
+                    <?= $error ?>
+                  </h1>
+                <?php endif; ?>
                 <p class="text-muted">Veuillez renseigner vos identifiants</p>
               </div>
               <div class="p-2 mt-4">
-                <form action="index.html">
+                <form action="connexion_fetch_data.php" method="post">
                   <div class="mb-3">
-                    <label for="username" class="form-label">Adresse e-mail</label>
-                    <input type="text" class="form-control" id="username" placeholder="Entrer votre adresse e-mail"
-                      value="<?php !empty($_POST['email']) ? $email : "" ?>" />
+                    <label for="email" class="form-label">Adresse e-mail</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Entrer votre adresse e-mail" />
                   </div>
 
                   <div class="mb-3">
                     <div class="float-end">
                       <a href="#" class="text-muted">Mot de passe oublié ?</a>
                     </div>
-                    <label class="form-label" for="password-input">Mot de passe</label>
+                    <label class="form-label" for="password">Mot de passe</label>
                     <div class="position-relative auth-pass-inputgroup mb-3">
-                      <input type="password" class="form-control pe-5 password-input"
+                      <input id="password" type="password" class="form-control pe-5 password-input" name="password"
                         placeholder="Entrer votre mot de passe" />
                       <button
                         class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"

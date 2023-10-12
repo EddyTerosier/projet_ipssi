@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once './inc/database.php';
 ?>
 
@@ -43,15 +43,18 @@ require_once './inc/database.php';
                 <form action="inscription_fetch_data.php" method="post">
                   <div class="mb-3">
                     <label for="lastname" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Entrer votre nom" name="lastname" />
+                    <input type="text" class="form-control" id="lastname" placeholder="Entrer votre nom"
+                      name="lastname" />
                   </div>
                   <div class="mb-3">
                     <label for="firstname" class="form-label">Prénom</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="Entrer votre prénom" name="firstname" />
+                    <input type="text" class="form-control" id="firstname" placeholder="Entrer votre prénom"
+                      name="firstname" />
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="text" class="form-control" id="email" placeholder="Entrer votre adresse e-mail" name="email" />
+                    <input type="text" class="form-control" id="email" placeholder="Entrer votre adresse e-mail"
+                      name="email" />
                   </div>
                   <div class="mb-3">
                     <label class="form-label" for="password">Mot de passe</label>
@@ -64,7 +67,7 @@ require_once './inc/database.php';
                         <i class="ri-eye-fill align-middle"></i>
                       </button>
                     </div>
-                  <!-- </div>
+                    <!-- </div>
                   <div class="mb-3">
                     <label class="form-label" for="password-input">Confirmer mot de passe</label>
                     <div class="position-relative auth-pass-inputgroup mb-3">
@@ -77,9 +80,9 @@ require_once './inc/database.php';
                       </button>
                     </div>
                   </div> -->
-                  <div class="mt-4">
-                    <button class="btn btn-success w-100 py-4 fs-3" type="submit">S'enregistrer</button>
-                  </div>
+                    <div class="mt-4">
+                      <button class="btn btn-success w-100 py-4 fs-3" type="submit">S'enregistrer</button>
+                    </div>
                 </form>
               </div>
             </div>
