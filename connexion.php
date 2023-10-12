@@ -55,7 +55,7 @@ $error = "";
                 <form action="connexion_fetch_data.php" method="post">
                   <div class="mb-3">
                     <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Entrer votre adresse e-mail" />
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Entrer votre adresse e-mail" required/>
                   </div>
 
                   <div class="mb-3">
@@ -65,7 +65,7 @@ $error = "";
                     <label class="form-label" for="password">Mot de passe</label>
                     <div class="position-relative auth-pass-inputgroup mb-3">
                       <input id="password" type="password" class="form-control pe-5 password-input" name="password"
-                        placeholder="Entrer votre mot de passe" />
+                        placeholder="Entrer votre mot de passe" required />
                       <button
                         class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
                         type="button">

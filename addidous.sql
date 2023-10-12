@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 12 oct. 2023 à 07:18
+-- Généré le : jeu. 12 oct. 2023 à 10:51
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.1.13
 
@@ -49,18 +49,6 @@ INSERT INTO `chaussures` (`ID`, `name`, `description`, `prix`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `session`
---
-
-DROP TABLE IF EXISTS `session`;
-CREATE TABLE IF NOT EXISTS `session` (
-  `sessionid` int NOT NULL,
-  `userid` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `users`
 --
 
@@ -72,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(50) NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `users`
@@ -80,8 +68,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES
 (1, 'John', 'Doe', 'John.doe@hotmail.com', '123'),
-(14, 'test', 'test', 'test@test.com', '$argon2id$v=19$m=65536,t=4,p=1$SGJWVFhkRmttNlZvVHpMZw$O3nPjo7+71LhaMeMZPuqg55DZa9kdWCOivUPzz4KHpA'),
-(15, 'salut', 'salut', 'salut@salut.com', '$argon2id$v=19$m=65536,t=4,p=1$bFRwcDhVakIxTUVxYUoxUQ$UnJensEQyN+a19rDeJoHolPN2PQ3y7EDYtNvVEq0slQ');
+(18, 'test', 'test', 'test@test.com', '$argon2id$v=19$m=65536,t=4,p=1$OS9oWXVndXEwQkRYV3RPcw$2kncybqqiQ5+xiGRhjAiVC2zUqPdSbFgeFlemHFjg7c');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
