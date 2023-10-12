@@ -27,11 +27,15 @@
           <div class="card text-center">
             <div class="card-body">
               <img src="<?php echo $chaussure['image']; ?>" class="card-img-top img-fluid" alt="<?php echo $chaussure['name']; ?>">
+              <hr>
               <h5 class="card-title"><?php echo $chaussure['name']; ?></h5>
               <p class="card-text"><?php echo $chaussure['description']; ?></p>
               <p class="card-text">Prix : $<?php echo number_format($chaussure['prix'], 2); ?></p>
             </div>
           </div>
+          <form action="produits_delete.php" method="post">
+              <button class="btn btn-danger" name="id" value="<?php echo $chaussure['ID'] ?>">Supprimer</button>
+          </form>
         </div>
         <?php
         }
